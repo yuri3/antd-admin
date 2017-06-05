@@ -1,0 +1,6 @@
+{
+  "name": "scrabble",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./scrabble.jsx"
+}

@@ -1,0 +1,124 @@
+@import '_normalize.less';
+@import '_variables.less';
+
+@import 'listGrid.less';
+@import 'fusciaSquare.less';
+@import 'scrabble.less';
+@import 'laboratory.less';
+
+@import 'toggle.less';
+@import 'slider.less';
+
+:global {
+  *, :after, :before {
+    box-sizing: border-box;
+  }
+
+  body, button, input, option, select {
+    color: @darkgray;
+    font-family: "museo-sans-rounded", sans-serif;
+  }
+
+  #render-target {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: @aqua;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .app {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+  }
+
+  #main-content {
+    flex: 1;
+    padding-bottom: 60px;
+  }
+
+  .card {
+    background: @white;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  .abs-left {
+    flex: 1;
+  }
+  .abs-right {
+    text-align: right;
+  }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  .Dropdown-root {
+    position: absolute;
+    z-index: 3;
+    background: #FFF;
+    width: 100%;
+    border: 2px solid @fuscia;
+    border-radius: 3px;
+    padding: 0 4px;
+    line-height: 34px;
+    font-size: 13px;
+    cursor: pointer;
+
+    .placeholder {
+      padding: 0 4px;
+    }
+
+    .Dropdown-option, &.is-open .placeholder {
+      border-bottom: 1px solid @lightgray;
+      padding: 0 4px;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.03);
+      }
+    }
+
+    .Dropdown-arrow {
+      position: absolute;
+      top: 0;
+      right: 8px;
+      font-family: 'FontAwesome';
+
+      &:before {
+        content: "\f107";
+      }
+    }
+  }
+
+  .row {
+    display: flex;
+  }
+
+  .col {
+    flex: 1;
+  }
+
+  .loop(@index) when (@index < 13) {
+    .col-@{index} {
+      flex: @index;
+    }
+    .loop((@index + 1))
+  }
+
+  .loop(1)
+}

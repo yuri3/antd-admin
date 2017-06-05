@@ -6,6 +6,9 @@ import { classnames, config, menu } from '../utils'
 import { Helmet } from 'react-helmet'
 import '../themes/index.less'
 import './app.less'
+
+import '../components/FlipMoveLess/main.less';
+
 import NProgress from 'nprogress'
 const { prefix } = config
 

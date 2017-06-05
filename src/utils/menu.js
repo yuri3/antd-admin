@@ -144,4 +144,42 @@ module.exports = [
     name: 'Test Navigation22',
     router: '/navigation/navigation2/navigation2',
   },
+  {
+    id: 7,
+    bpid: 1,
+    icon: 'setting',
+    name: 'Flip move',
+  },
+  {
+    id: 71,
+    bpid: 7,
+    mpid: 7,
+    icon: 'bars',
+    name: 'List/Grid Reordering',
+    router: '/FlipMove/listGrid',
+  },
+  {
+    id: 72,
+    bpid: 7,
+    mpid: 7,
+    icon: 'bars',
+    name: 'Fuscia Square',
+    router: '/FlipMove/fusciaSquare',
+  },
+  {
+    id: 73,
+    bpid: 7,
+    mpid: 7,
+    icon: 'bars',
+    name: 'Scrabble',
+    router: '/FlipMove/scrabble',
+  },
+  {
+    id: 74,
+    bpid: 7,
+    mpid: 7,
+    icon: 'setting',
+    name: 'Laboratory',
+    router: '/FlipMove/laboratory',
+  }
 ]

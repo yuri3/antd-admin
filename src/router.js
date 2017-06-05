@@ -124,6 +124,34 @@ const Routers = function ({ history, app }) {
             }, 'chart-areaChart')
           },
         }, {
+          path: 'FlipMove/listGrid',
+          getComponent (nextState, cb) {
+            require.ensure([], require => {
+              cb(null, require('./components/ListGrid/listGrid'))
+            }, 'FlipMove-listGrid')
+          },
+        }, {
+          path: 'FlipMove/fusciaSquare',
+          getComponent (nextState, cb) {
+            require.ensure([], require => {
+              cb(null, require('./components/FusciaSquare/fusciaSquare'))
+            }, 'FlipMove-fusciaSquare')
+          },
+        }, {
+          path: 'FlipMove/scrabble',
+          getComponent (nextState, cb) {
+            require.ensure([], require => {
+              cb(null, require('./components/Scrabble/scrabble'))
+            }, 'FlipMove-scrabble')
+          },
+        }, {
+          path: 'FlipMove/laboratory',
+          getComponent (nextState, cb) {
+            require.ensure([], require => {
+              cb(null, require('./components/Laboratory/laboratory'))
+            }, 'FlipMove-laboratory')
+          },
+        }, {
           path: '*',
           getComponent (nextState, cb) {
             require.ensure([], require => {
